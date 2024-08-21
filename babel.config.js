@@ -9,22 +9,5 @@
 'use strict';
 
 module.exports = {
-  plugins: [
-    [
-      require('./scripts/error-codes/transform-error-messages'),
-      {noMinify: true},
-    ],
-  ],
-  presets: [
-    [
-      '@babel/preset-env',
-      {
-        targets: {
-          node: 'current',
-        },
-      },
-    ],
-    ['@babel/preset-react', {runtime: 'automatic'}],
-    '@babel/preset-flow',
-  ],
+  presets: [require.resolve('@docusaurus/core/lib/babel/preset')],
 };
