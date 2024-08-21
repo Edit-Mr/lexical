@@ -12,10 +12,6 @@
 
 const {github: lightCodeTheme, dracula: darkCodeTheme} =
   require('prism-react-renderer').themes;
-const slugifyPlugin = require('./src/plugins/lexical-remark-slugify-anchors');
-const {packagesManager} = process.env.FB_INTERNAL
-  ? {}
-  : require('../../scripts/shared/packagesManager');
 const path = require('node:path');
 
 const TITLE = 'Lexical';
